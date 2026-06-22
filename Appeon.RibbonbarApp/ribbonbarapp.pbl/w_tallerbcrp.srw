@@ -32,7 +32,7 @@ end on
 
 event open;String ls_var
 
-ls_var = this.classname()  //PR de emergencia
+ls_var = String(Now())   //PR de emergencia
 end event
 
 type mc_1 from monthcalendar within w_tallerbcrp
