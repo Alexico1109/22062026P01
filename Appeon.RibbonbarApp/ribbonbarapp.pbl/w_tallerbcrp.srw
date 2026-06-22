@@ -1,6 +1,8 @@
 ﻿forward
 global type w_tallerbcrp from window
 end type
+type cb_1 from commandbutton within w_tallerbcrp
+end type
 type mc_1 from monthcalendar within w_tallerbcrp
 end type
 end forward
@@ -17,16 +19,20 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_1 cb_1
 mc_1 mc_1
 end type
 global w_tallerbcrp w_tallerbcrp
 
 on w_tallerbcrp.create
+this.cb_1=create cb_1
 this.mc_1=create mc_1
-this.Control[]={this.mc_1}
+this.Control[]={this.cb_1,&
+this.mc_1}
 end on
 
 on w_tallerbcrp.destroy
+destroy(this.cb_1)
 destroy(this.mc_1)
 end on
 
@@ -65,4 +71,19 @@ event datechanged;String ls_date
 ls_date = string (today())
 
 end event
+
+type cb_1 from commandbutton within w_tallerbcrp
+integer x = 617
+integer y = 1120
+integer width = 402
+integer height = 112
+integer taborder = 20
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "Ok"
+end type
 
