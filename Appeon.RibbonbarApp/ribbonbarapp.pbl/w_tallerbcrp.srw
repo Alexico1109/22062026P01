@@ -60,3 +60,9 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 end type
 
+event datechanged;String ls_date
+
+ls_date = string (today())
+
+end event
+
