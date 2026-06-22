@@ -32,7 +32,7 @@ end on
 
 event open;String ls_var
 
-ls_var = this.classname()  //PR de emergencia
+ls_var = "PRUEBA DE RESOLUCIÓN DE CONFLICTO CON GIT/PB 2025 R2"  //PR de emergencia
 end event
 
 type mc_1 from monthcalendar within w_tallerbcrp
