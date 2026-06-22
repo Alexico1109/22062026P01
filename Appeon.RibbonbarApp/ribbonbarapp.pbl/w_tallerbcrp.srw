@@ -87,3 +87,6 @@ string facename = "Tahoma"
 string text = "Ok"
 end type
 
+event clicked;messagebox("Test", this.classname())
+end event
+
